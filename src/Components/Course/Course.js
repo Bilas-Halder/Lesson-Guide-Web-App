@@ -2,11 +2,17 @@ import React from 'react';
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import "./Course.css";
 
-const Course = ({ course }) => {
+const Course = ({ course, color }) => {
     const { title, imgURL, category, lessons, trainer, rating, ratedPeople, price, discountPrice } = course;
+    const categoryStyle = { backgroundColor: color }
     return (
-        <Card style={{ width: '95%' }}>
-            <Card.Img variant="top" src={imgURL} />
+        <Card className="single-card" style={{
+            width: '95%', position: "relative"
+        }}>
+            <div style={categoryStyle} className="category">{category}</div>
+            <div className="card-img-container">
+                <Card.Img className="card-img" variant="top" src={imgURL} />
+            </div>
             <Card.Body>
                 <div className="card-top d-flex justify-content-between">
                     <p>
@@ -43,7 +49,7 @@ const Course = ({ course }) => {
                                 discountPrice && <span className="cross-price"> (<small> {price} </small>)</span>
                             }
                         </div>
-                        <div className="btn">Add to Cart</div>
+                        <div className="btn">Enroll Now</div>
                     </div>
                 </ListGroupItem>
             </ListGroup>

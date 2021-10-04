@@ -1,4 +1,25 @@
 
+.single-card{
+    margin: 0px auto;
+    margin-top: 3rem;
+    transition: all 0.3s ease-in;
+}
+.card-img{
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+}
+.card-img-container{
+    width: 100%;
+    overflow: hidden;
+    z-index: 29;
+}
+.single-card:hover .card-img{
+    transform: scale(1.1,1.1);
+}
+.single-card:hover{
+    margin-top: 2.5rem;
+    box-shadow: 2px 2px 7px gray;
+}
 .trainer-img{
     width: 40px;
     height: 40px;
@@ -14,6 +35,18 @@
     top: 3px;
     left: 8px;
     color: #474747;
+}
+.category{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: white;
+    padding: 0 12px;
+    padding-bottom: 2px;
+    font-size: 14px;
+    border-radius: 5px;
+    z-index: 30;
+    
 }
 .trainer-name{
     line-height: 0;

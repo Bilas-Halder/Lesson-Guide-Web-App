@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import "./Home.css";
 import image from "../../images/bg_img.jpg";
+import shape from "../../images/shape.png";
 import { NavLink } from "react-router-dom";
 import { Button, Row, Col, Container } from "react-bootstrap";
 import Course from '../Course/Course';
@@ -9,7 +10,7 @@ import { DataContext } from "../../App";
 const Home = () => {
     const [height, setHeight] = useState(0);
     const data = useContext(DataContext);
-
+    const colors = ["#4949ff", "#d19500", "#00b32f", "#c9009e", "#bf0c0c"];
     useEffect(() => {
         setHeight(window.innerHeight * 22 / 100);
     }, [window.innerHeight])
@@ -32,19 +33,35 @@ const Home = () => {
                     </NavLink>
                 </div>
             </div>
-            <div className="courses-section m-5">
+            <div className="courses-section h-100">
+                <h1 className="mt-5" style={{ textAlign: "center" }}>Our Courses</h1>
                 <Container>
                     <Row>
                         {
                             data.map((course, idx) => {
-                                if (idx >= 3) return "";
+                                const color = colors[Math.floor(Math.random() * 5)];
+                                if (idx >= 6) return "";
                                 return (<Col key={idx} md={4} sm={12} >
-                                    <Course key={course.id} course={course}></Course>
+                                    <Course key={course.id} color={color} course={course}></Course>
                                 </Col>);
                             })
                         }
                     </Row>
                 </Container>
+                <div className="see-btn d-flex justify-content-center mb-5">
+                    <NavLink to={'/courses'}>
+                        <Button className="custom-primary-btn">See All Courses</Button>
+                    </NavLink>
+                </div>
+            </div>
+            <div className="d-flex justify-content-center">
+                <div className="signin-section">
+                    <img src={shape} alt="" />
+                    <div className="d-flex justify-content-between align-items-center m-5">
+                        <h1 style={{ color: "white" }}>Want to be a trainer? <br /> Be a trainer on our online lectures</h1>
+                        <NavLink className="signin-btn" to="/signin">Sign In</NavLink>
+                    </div>
+                </div>
             </div>
         </div>
     );

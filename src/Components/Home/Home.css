@@ -41,8 +41,46 @@
     background-color: #0000ff00;
     border-width: 2px;
 }
+.see-btn .custom-primary-btn:hover{
+    color: #004bbd;
+}
 
 /* courses section */
 .courses-section{
     height: 500px;
 }
+/* signIn-section */
+.signin-section{
+    margin-top: 3rem;
+    width: 82%;
+    height: 200px;
+    background-color: #2B4EFF;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.signin-section img{
+    position: absolute;
+    top: -100px;
+    right: -200px;
+    z-index: 40;
+}
+
+.signin-btn{
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: white;
+    padding: 10px 30px;
+    height: 16%;
+    border-radius: 5px;
+    z-index: 41;
+    transition:  all 0.2s ease-in;
+    margin-right: 3rem;
+}
+.signin-btn:hover{
+    color: black;
+    border: none;
+    box-shadow: 3px 3px 7px gray;
+    margin-top: -10px;
+}
+
