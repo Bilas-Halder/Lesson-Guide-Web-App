@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import { useState, useEffect, createContext, useContext } from "react";
+import { createContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import useData from './Hooks/useData';
 import Header from "./Components/Header/Header";
@@ -10,9 +9,11 @@ import About from "./Components/About/About";
 import Footer from './Components/Footer/Footer';
 import Courses from './Components/Courses/Courses';
 import NotFound from './Components/NotFound/NotFound';
+import SignIn from './Components/SignIn/SignIn';
 
 const DataContext = createContext([]);
 export { DataContext };
+// context api
 
 function App() {
   const [data, setData] = useData();
@@ -27,8 +28,8 @@ function App() {
             <Route path='/home' exact><Home></Home></Route>
             <Route path='/courses' ><Courses></Courses></Route>
             <Route path='/about' ><About></About></Route>
+            <Route path='/signin' ><SignIn></SignIn></Route>
             <Route path='/*' ><NotFound></NotFound></Route>
-
           </Switch>
           <Footer></Footer>
         </Router>
@@ -38,6 +39,3 @@ function App() {
 }
 
 export default App;
-
-// use context api
-// const data = useContext(DataContext);

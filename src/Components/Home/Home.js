@@ -9,15 +9,22 @@ import { DataContext } from "../../App";
 
 const Home = () => {
     const [height, setHeight] = useState(0);
+    // height is for window height
     const data = useContext(DataContext);
+    // using context api
+
     const colors = ["#4949ff", "#d19500", "#00b32f", "#c9009e", "#bf0c0c"];
+    // colors are for chosing random color for category
+
     useEffect(() => {
         setHeight(window.innerHeight * 22 / 100);
+        // setting height as 22% of window height
     }, [window.innerHeight])
 
     const textStyle = {
         top: height
     };
+
     return (
         <div className="home-container">
             <div className="top-section">

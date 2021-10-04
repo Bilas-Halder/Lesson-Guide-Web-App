@@ -1,0 +1,23 @@
+.signin-container{
+    background-color: #ffffffb4;
+    width: 70%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 2px #666666;
+}
+.submit-btn{
+    color:white;
+    background-color: #5353ff;
+    border: none;
+    font-size: 1.2rem;
+    padding: 5px 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in;
+}
+.submit-btn:hover{
+    font-weight: 600;
+    background-color:white;
+    color: #5353ff;
+    border: 2px solid #5353ff;
+}

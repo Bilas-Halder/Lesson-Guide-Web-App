@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import "./Course.css";
 
 const Course = ({ course, color }) => {
-    const { title, imgURL, category, lessons, trainer, rating, ratedPeople, price, discountPrice } = course;
-    const categoryStyle = { backgroundColor: color }
+    // destructed course details
+    const { title, imgURL, category, lessons, trainer, rating, ratedPeople, price, discountPrice, id } = course;
+
+    const categoryStyle = { backgroundColor: color };
+
+    const [enrolled, SetEnrolled] = useState(0);
+    // for checking enrolled or not
+    useEffect(() => {
+        if (localStorage.getItem(id) == "1") {
+            SetEnrolled(1);
+        }
+        else {
+            SetEnrolled(0);
+        }
+    }, [])
+
+    const enrollBtnHandler = key => {
+        localStorage.setItem(key, "1");
+        SetEnrolled(1);
+    }
     return (
         <Card className="single-card" style={{
             width: '95%', position: "relative"
@@ -16,10 +34,10 @@ const Course = ({ course, color }) => {
             <Card.Body>
                 <div className="card-top d-flex justify-content-between">
                     <p>
-                        <span style={{ color: "gray" }}><i class="fas fa-book-reader"></i></span> {lessons} Lessons
+                        <span style={{ color: "gray" }}><i className="fas fa-book-reader"></i></span> {lessons} Lessons
                     </p>
                     <p>
-                        <span style={{ color: "#eeb422" }}><i class="fas fa-star"></i> </span>
+                        <span style={{ color: "#eeb422" }}><i className="fas fa-star"></i> </span>
                         <span>{rating}</span> ({ratedPeople})
                     </p>
                 </div>
@@ -29,7 +47,7 @@ const Course = ({ course, color }) => {
                     <div className="trainer-info d-flex align-content-center mt-4">
                         <div className="trainer-img">
                             <div className="user-icon">
-                                <i class="fas fa-user-graduate"></i>
+                                <i className="fas fa-user-graduate"></i>
                             </div>
                         </div>
                         <p className="trainer-name">{trainer}</p>
@@ -49,7 +67,13 @@ const Course = ({ course, color }) => {
                                 discountPrice && <span className="cross-price"> (<small> {price} </small>)</span>
                             }
                         </div>
-                        <div className="btn">Enroll Now</div>
+                        {
+                            enrolled ?
+                                <p style={{ margin: "0px", fontSize: "1.1rem" }}>Enrolled <span style={{ color: "blue" }}>
+                                    <i className="fas fa-check"></i></span>
+                                </p>
+                                : <button onClick={() => enrollBtnHandler(course.id)} className="enroll-btn">Enroll Now</button>
+                        }
                     </div>
                 </ListGroupItem>
             </ListGroup>

@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useData = () => {
     const [data, setData] = useState([]);
-
+    // fetching data
     useEffect(() => {
         fetch("./mainData.JSON")
             .then(res => res.json())
