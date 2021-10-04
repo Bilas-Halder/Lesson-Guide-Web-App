@@ -1,0 +1,107 @@
+[
+    {
+        "title": "Become a product Manager learn the skills & job",
+        "category": "Development",
+        "lessons": 43,
+        "trainer": "Jim Sechen",
+        "rating": 4.7,
+        "ratedPeople": 122,
+        "price": "46.00",
+        "discountPrice": "16.00",
+        "imgURL": "https://themepure.net/template/educal/educal/assets/img/course/course-1.jpg",
+        "id": "1x1"
+    },
+    {
+        "title": "Fundamentals of music theory Learn new",
+        "category": "Music",
+        "lessons": "72",
+        "trainer": "Barry Tone",
+        "rating": 4.2,
+        "ratedPeople": 43,
+        "price": "32.99",
+        "imgURL": "https://themepure.net/template/educal/educal/assets/img/course/course-9.jpg",
+        "id": "1x2"
+    },
+    {
+        "title": "Basics Mathematics Algebra Equation",
+        "category": "Mathematics",
+        "trainer": "Samuel Serif",
+        "lessons": "39",
+        "rating": 4.5,
+        "ratedPeople": 32,
+        "price": "22.49",
+        "discountPrice": "12.49",
+        "imgURL": "https://themepure.net/template/educal/educal/assets/img/course/course-7.jpg",
+        "id": "1x3"
+    },
+    {
+        "title": "Strategy law and organization Foundation",
+        "category": "Marketing",
+        "trainer": "Elon Mask",
+        "lessons": "14",
+        "rating": 4.9,
+        "ratedPeople": 52,
+        "price": "20.00",
+        "imgURL": "https://themepure.net/template/educal/educal/assets/img/course/course-3.jpg",
+        "id": "2x1"
+    },
+    {
+        "title": "The business Intelligence analyst Course 2022",
+        "category": "Development",
+        "trainer": "Peter Parker",
+        "lessons": "36",
+        "rating": 5,
+        "ratedPeople": 12,
+        "price": "24.00",
+        "discountPrice": "21.99",
+        "imgURL": "https://themepure.net/template/educal/educal/assets/img/course/course-4.jpg",
+        "id": "2x2"
+    },
+    {
+        "title": "The business Intelligence analyst Course 2022",
+        "category": "Business",
+        "trainer": "Eren Yeager",
+        "lessons": "42",
+        "rating": 4.5,
+        "ratedPeople": 62,
+        "price": "36.00",
+        "discountPrice": "22.00",
+        "imgURL": "https://themepure.net/template/educal/educal/assets/img/course/course-8.jpg",
+        "id": "2x3"
+    },
+    {
+        "title": "Build your media and Public presence",
+        "category": "Marketing",
+        "trainer": "Necolas Flamel",
+        "lessons": "12",
+        "rating": 4.3,
+        "ratedPeople": 85,
+        "price": "9.99",
+        "discountPrice": "5.00",
+        "imgURL": "https://themepure.net/template/educal/educal/assets/img/course/course-5.jpg",
+        "id": "3x1"
+    },
+    {
+        "title": "UI UX Design And Development",
+        "category": "Development",
+        "trainer": "Tanjiro Kamado",
+        "lessons": "24",
+        "rating": 4.9,
+        "ratedPeople": 32,
+        "price": "36.00",
+        "imgURL": "https://themepure.net/template/educal/educal/assets/img/course/course-6.jpg",
+        "id": "3x2"
+    },
+    {
+        "title": "Creative writing through Storytelling",
+        "category": "Business",
+        "trainer": "Peter Quil",
+        "lessons": "41",
+        "rating": 5,
+        "ratedPeople": 3,
+        "price": "72.20",
+        "discountPrice": "36.00",
+        "imgURL": "https://themepure.net/template/educal/educal/assets/img/course/course-2.jpg",
+        "id": "3x3"
+    }
+]

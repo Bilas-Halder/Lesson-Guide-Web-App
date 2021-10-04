@@ -1,0 +1,27 @@
+
+.trainer-img{
+    width: 40px;
+    height: 40px;
+    background-color: #d8d8d8;
+    border-radius: 50%;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.trainer-img .user-icon{
+    font-size: 1.8rem;
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    color: #474747;
+}
+.trainer-name{
+    line-height: 0;
+    margin: auto 0px;
+}
+.cross-price{
+    font-size: 0.9rem;
+}
+.cross-price small{
+    text-decoration: line-through;
+}

@@ -1,0 +1,30 @@
+.custom-navbar-color{
+    background-color:#f8f9faec;
+}
+.header-btn{
+    margin: 12px 5px;
+    padding: 7px 20px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    position: relative;
+}
+.header-btn::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    height: 2px;
+    width: 0%;
+    background-color: #2B4EFF;
+    transition: all 0.3s ease-in;
+
+}
+.header-btn:hover{
+    color: black;
+}
+.header-btn:hover::after{
+    width: 80%;
+}
+.active::after{
+    width: 80%;
+}

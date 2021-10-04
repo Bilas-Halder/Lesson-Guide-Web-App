@@ -1,0 +1,48 @@
+.home-container{
+    position: relative;
+    margin-top: 75px;
+}
+.bg-img-div{
+    position: relative;
+}
+.bg-img-div::after{
+    content: "";
+    position: absolute;
+    top: 10;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0000009f;
+}
+.bg-img{
+    width: 100%;
+}
+.text{
+    position: absolute;
+    left: 0;
+    color: white;
+    padding-left: 5%;
+    width: 35%;
+    z-index: 21;
+}
+.quote{
+    font-size: 45px;
+}
+.custom-primary-btn{
+    padding: 7px 20px;
+    font-size: 22px;
+    margin-top: 30px;
+    transform: all 0.3s ease-in;
+}
+.custom-primary-btn:hover{
+    box-shadow: 1px 1px 7px #757575;
+    margin-top: 25px;
+    color: #4790ff;
+    background-color: #0000ff00;
+    border-width: 2px;
+}
+
+/* courses section */
+.courses-section{
+    height: 500px;
+}
