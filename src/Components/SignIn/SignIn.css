@@ -5,6 +5,15 @@
     border-radius: 10px;
     box-shadow: 3px 3px 10px 2px #666666;
 }
+.custom-input{
+    width: 75%;
+    border-color: #2B4EFF;
+}
+.custom-input input{
+    border-color: #2B4EFF;
+}
+
+
 .submit-btn{
     color:white;
     background-color: #5353ff;

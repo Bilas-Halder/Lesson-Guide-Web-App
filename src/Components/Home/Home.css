@@ -52,7 +52,7 @@
 /* signIn-section */
 .signin-section{
     margin-top: 3rem;
-    width: 82%;
+    width: 100%;
     height: 200px;
     background-color: #2B4EFF;
     border-radius: 10px;
@@ -83,4 +83,23 @@
     box-shadow: 3px 3px 7px gray;
     margin-top: -10px;
 }
-
+/* subscribe section */
+#subscribe{
+    height: 250px;
+    width: 82%;
+    margin-top: 5rem;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 3px 3px 7px 2px gray;
+}
+#subscribe .submit-btn{
+    font-size: 1.1rem;
+}
+#subscribe .submit-btn:hover{
+    padding: 3px 30px;
+    margin-top: 19px;
+}
+.subscriber-form{
+    color: black;
+    border-color: #2B4EFF;
+}

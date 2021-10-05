@@ -1,7 +1,19 @@
 .about-container{
-    background-color: #ffffffb4;
+    background-color: white;
+    color: #575757;
+    /* background-color: #ffffffb4; */
     width: 80%;
     height: 500px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px 2px #666666;
+    overflow: hidden;
+}
+.about-text{
+    z-index: 1000;
+}
+.about-shape{
+    position: absolute;
+    bottom: -375px;
+    right: -240px;
+    z-index: 99;
 }

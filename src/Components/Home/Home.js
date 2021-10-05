@@ -10,7 +10,7 @@ import { DataContext } from "../../App";
 const Home = () => {
     const [height, setHeight] = useState(0);
     // height is for window height
-    const data = useContext(DataContext);
+    const data = useContext(DataContext).slice(0, 6);
     // using context api
 
     const colors = ["#4949ff", "#d19500", "#00b32f", "#c9009e", "#bf0c0c"];
@@ -40,6 +40,7 @@ const Home = () => {
                     </NavLink>
                 </div>
             </div>
+
             <div className="courses-section h-100">
                 <h1 className="mt-5" style={{ textAlign: "center" }}>Our Courses</h1>
                 <Container>
@@ -47,7 +48,6 @@ const Home = () => {
                         {
                             data.map((course, idx) => {
                                 const color = colors[Math.floor(Math.random() * 5)];
-                                if (idx >= 6) return "";
                                 return (<Col key={idx} md={4} sm={12} >
                                     <Course key={course.id} color={color} course={course}></Course>
                                 </Col>);
@@ -61,13 +61,23 @@ const Home = () => {
                     </NavLink>
                 </div>
             </div>
-            <div className="d-flex justify-content-center">
+
+            <div style={{ width: "82%" }} className="container d-flex justify-content-center">
                 <div className="signin-section">
                     <img src={shape} alt="" />
                     <div className="d-flex justify-content-between align-items-center m-5">
                         <h1 style={{ color: "white" }}>Want to be a trainer? <br /> Be a trainer on our online lectures</h1>
                         <NavLink className="signin-btn" to="/signin">Sign In</NavLink>
                     </div>
+                </div>
+            </div>
+
+            <div className="container d-flex align-items-center justify-content-center" id="subscribe">
+                <div>
+                    <h3>LET'S STAY IN TOUCH</h3>
+                    <h6>Get updates on sales, specials and more</h6>
+                    <input className="form-control subscriber-form" type="text" />
+                    <button className="custom-primary-btn submit-btn">Subscribe</button>
                 </div>
             </div>
         </div>
